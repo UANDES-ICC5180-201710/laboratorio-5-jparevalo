@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   resources :enrollments
   resources :courses do
     get 'students', to: 'courses#students', on: :member
-    get 'assignments', to: 'courses#assignments'
+    get 'assignments', to: 'courses#assignments', on: :member
   end
   resources :people
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html

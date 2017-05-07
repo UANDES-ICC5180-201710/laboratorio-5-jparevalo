@@ -67,6 +67,7 @@ class CoursesController < ApplicationController
 
   def assignments
     @course = Course.find(params[:id])
+    @assignments = Assignment.where("course_id = ?", @course.id)
   end
 
   private
