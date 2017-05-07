@@ -6,5 +6,5 @@ class Assignment < ApplicationRecord
 
   def to_s
     return title
-  end
+  end 
 end
