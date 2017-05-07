@@ -1,8 +1,9 @@
 <p id="notice"><%= notice %></p>
 
-<h1>People</h1>
+<h1>Students</h1>
 
-<%= render 'list', people:@people %>
+<%= render 'people/list', people:@course.students %>
+
 <br>
 
 <%= link_to 'New Person', new_person_path %>

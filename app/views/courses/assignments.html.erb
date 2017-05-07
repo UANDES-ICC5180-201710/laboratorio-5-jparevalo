@@ -1,0 +1,9 @@
+<p id="notice"><%= notice %></p>
+
+<h1>assignments</h1>
+
+<%= render 'assignments/index', assignments:@course.assignments %>
+
+<br>
+
+<%= link_to 'New assignments', new_assignment_path %>
