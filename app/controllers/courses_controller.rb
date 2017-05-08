@@ -70,6 +70,12 @@ class CoursesController < ApplicationController
     @assignments = Assignment.where("course_id = ?", @course.id)
   end
 
+  def grades
+    @course = Course.find(params[:id])
+    @assignments = Assignment.where("course_id = ?", @course.id)
+    @grades = Grade.where(:assignment_id=>@assignments.ids)
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_course
